@@ -43,7 +43,7 @@ if uploaded_file:
         st.image(output_img, caption=f"Detected {count} tablets", use_column_width=True)
         st.success(f"✅ Total Tablets Counted: {count}")
 
-        if st.button("🖨 Generate Dispensing Label"):
+        if st.button("🖨️ Generate Dispensing Label"):
             now = datetime.now().strftime("%d-%m-%Y %I:%M %p")
             st.text_area("📋 Label Preview", 
                          f"THYRONORM DISPENSING LABEL\n"
@@ -51,4 +51,4 @@ if uploaded_file:
                          f"Date: {now}\n"
                          f"Packed by: ___________", height=120)
     else:
-        st.error("⚠ No tablets detected. Use clear photo, no glare or blur.")
+        st.error("⚠️ No tablets detected. Use clear photo, no glare or blur.")
